@@ -35,7 +35,7 @@ const Navbar = () => {
           </NavLink>
         </button>
       </div>
-      <hr className="border bg-black-700 border-gray-300 mb-8" />
+      <hr className="border bg-black-700 border-gray-300 mx-64 mb-8" />
     </div>
   );
 };

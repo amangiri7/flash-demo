@@ -54,8 +54,8 @@ const addFlashCard = (values, actions) => {
       onSubmit={addFlashCard}
     >
       {({ values, isSubmitting, setFieldValue }) => (
-        <Form className="w-full space-y-10 text-black-600 text-bold font-medium">
-          <div className="md:flex flex-col px-10 py-4 bg-white drop-shadow-lg space-y-4 rounded-lg">
+        <Form className="container w-full m-auto space-y-10 text-black-600 text-bold font-medium">
+          <div className="md:flex flex-col px-10 py-5 bg-white drop-shadow-lg space-y-5 rounded-lg">
             <div className="flex flex-col sm:flex-row items-center space-x-10 pt-3">
               <div className="flex flex-col relative">
                 <label htmlFor="createGroup">Create Group *</label>
@@ -208,8 +208,12 @@ const addFlashCard = (values, actions) => {
                                 <div className="flex items-center justify-around w-full md:flex-col md:space-y-5 md:mt-5">
                                   <button
                                     type="button"
-                                    onClick={() => arrayHelper.remove(index)} // will remove flashcard entry 
-                                  >
+                                   >
+                                    {values.cards.length<=1 ? "" :
+                                    <AiOutlineDelete
+                                    className="w-7 h-7  text-black-500" 
+                                    onClick={() => arrayHelper.remove(index<=1)}
+                                    />}
 
                                     <AiOutlineDelete className="w-7 h-7  text-black-500" />
                                   </button>
